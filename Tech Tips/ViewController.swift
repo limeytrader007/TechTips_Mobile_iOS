@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UICollectionViewController {
     
     let reuseIdentifier = "ContentCell"
     private let cellHeight: CGFloat = 210
@@ -37,12 +37,23 @@ class ViewController: UIViewController {
         print("VC: viewDidDisappear")
     }
     
+    let inspirations = Inspiration.allInspirations()
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let navBar = self.navigationController!.navigationBar
         navBar.barTintColor = UIColor.whiteColor()
         navBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blackColor()]
+        
+        if let patternImage = UIImage(named: "Pattern") {
+            view.backgroundColor = UIColor(patternImage: patternImage)
+        }
+        collectionView!.backgroundColor = UIColor.clearColor()
+        collectionView!.decelerationRate = UIScrollViewDecelerationRateFast
     }
     
     @IBAction func showMenuAction(sender: UIButton) {
@@ -60,22 +71,22 @@ class ViewController: UIViewController {
 }
 
 // The following is just for the presentation. You can ignore it
-extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension ViewController {
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell: AnyObject? = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
-        return cell as! UICollectionViewCell!
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return inspirations.count
     }
     
-    func collectionView(collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                               sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(CGRectGetWidth(collectionView.bounds) - cellSpacing, cellHeight)
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("InspirationCell", forIndexPath: indexPath) as! InspirationCell
+        cell.inspiration = inspirations[indexPath.item]
+        return cell
     }
+    
 }
 
 extension ViewController: UIViewControllerTransitioningDelegate {
