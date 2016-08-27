@@ -11,11 +11,13 @@
 		99C92DFA94A78E37821F86E7 /* Pods_Tech_Tips.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B682F86CDAA9F04340A00562 /* Pods_Tech_Tips.framework */; };
 		DCAB336A1D711CA6001E20E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAB33691D711CA6001E20E6 /* AppDelegate.swift */; };
 		DCAB336C1D711CA6001E20E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAB336B1D711CA6001E20E6 /* ViewController.swift */; };
-		DCAB336F1D711CA6001E20E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCAB336D1D711CA6001E20E6 /* Main.storyboard */; };
 		DCAB33711D711CA6001E20E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCAB33701D711CA6001E20E6 /* Assets.xcassets */; };
 		DCAB33741D711CA6001E20E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCAB33721D711CA6001E20E6 /* LaunchScreen.storyboard */; };
 		DCAB337F1D711CA6001E20E6 /* Tech_TipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAB337E1D711CA6001E20E6 /* Tech_TipsTests.swift */; };
 		DCAB338A1D711CA6001E20E6 /* Tech_TipsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAB33891D711CA6001E20E6 /* Tech_TipsUITests.swift */; };
+		DCAB33981D71B43C001E20E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCAB33971D71B43C001E20E6 /* Main.storyboard */; };
+		DCAB339D1D71B55A001E20E6 /* GuillotineMenuTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAB339C1D71B55A001E20E6 /* GuillotineMenuTransitionAnimation.swift */; };
+		DCAB339F1D71B5F6001E20E6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAB339E1D71B5F6001E20E6 /* MenuViewController.swift */; };
 		EF51630D0036083B4A9D7721 /* Pods_Tech_TipsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091CC7D7A86ACDF737AC9A08 /* Pods_Tech_TipsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +50,6 @@
 		DCAB33661D711CA5001E20E6 /* Tech Tips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tech Tips.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCAB33691D711CA6001E20E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCAB336B1D711CA6001E20E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DCAB336E1D711CA6001E20E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DCAB33701D711CA6001E20E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCAB33731D711CA6001E20E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCAB33751D711CA6001E20E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +59,9 @@
 		DCAB33851D711CA6001E20E6 /* Tech TipsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tech TipsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCAB33891D711CA6001E20E6 /* Tech_TipsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tech_TipsUITests.swift; sourceTree = "<group>"; };
 		DCAB338B1D711CA6001E20E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCAB33971D71B43C001E20E6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DCAB339C1D71B55A001E20E6 /* GuillotineMenuTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuillotineMenuTransitionAnimation.swift; sourceTree = "<group>"; };
+		DCAB339E1D71B5F6001E20E6 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		E7F6772B6F2FB5A27974E091 /* Pods-Tech TipsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tech TipsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tech TipsUITests/Pods-Tech TipsUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,11 +141,10 @@
 		DCAB33681D711CA6001E20E6 /* Tech Tips */ = {
 			isa = PBXGroup;
 			children = (
+				DCAB339A1D71B493001E20E6 /* Storyboard */,
+				DCAB33991D71B489001E20E6 /* Views */,
 				DCAB33691D711CA6001E20E6 /* AppDelegate.swift */,
-				DCAB336B1D711CA6001E20E6 /* ViewController.swift */,
-				DCAB336D1D711CA6001E20E6 /* Main.storyboard */,
 				DCAB33701D711CA6001E20E6 /* Assets.xcassets */,
-				DCAB33721D711CA6001E20E6 /* LaunchScreen.storyboard */,
 				DCAB33751D711CA6001E20E6 /* Info.plist */,
 			);
 			path = "Tech Tips";
@@ -163,6 +166,33 @@
 				DCAB338B1D711CA6001E20E6 /* Info.plist */,
 			);
 			path = "Tech TipsUITests";
+			sourceTree = "<group>";
+		};
+		DCAB33991D71B489001E20E6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DCAB339B1D71B4AA001E20E6 /* GuillotineMenu */,
+				DCAB336B1D711CA6001E20E6 /* ViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		DCAB339A1D71B493001E20E6 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DCAB33721D711CA6001E20E6 /* LaunchScreen.storyboard */,
+				DCAB33971D71B43C001E20E6 /* Main.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		DCAB339B1D71B4AA001E20E6 /* GuillotineMenu */ = {
+			isa = PBXGroup;
+			children = (
+				DCAB339E1D71B5F6001E20E6 /* MenuViewController.swift */,
+				DCAB339C1D71B55A001E20E6 /* GuillotineMenuTransitionAnimation.swift */,
+			);
+			name = GuillotineMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,9 +307,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCAB33981D71B43C001E20E6 /* Main.storyboard in Resources */,
 				DCAB33741D711CA6001E20E6 /* LaunchScreen.storyboard in Resources */,
 				DCAB33711D711CA6001E20E6 /* Assets.xcassets in Resources */,
-				DCAB336F1D711CA6001E20E6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,8 +457,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCAB339D1D71B55A001E20E6 /* GuillotineMenuTransitionAnimation.swift in Sources */,
 				DCAB336C1D711CA6001E20E6 /* ViewController.swift in Sources */,
 				DCAB336A1D711CA6001E20E6 /* AppDelegate.swift in Sources */,
+				DCAB339F1D71B5F6001E20E6 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,14 +496,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DCAB336D1D711CA6001E20E6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DCAB336E1D711CA6001E20E6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DCAB33721D711CA6001E20E6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
